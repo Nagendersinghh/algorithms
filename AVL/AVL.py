@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
-import math
 
 def height(node):
     if node is None:
         return -1
     return node.height
 
+
 def update_height(node):
     node.height = max(height(node.left), height(node.right)) + 1
+
 
 class Node():
     """A node in the tree."""

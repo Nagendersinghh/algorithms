@@ -1,5 +1,6 @@
 import math
 
+
 class Heap(object):
     def __init__(self, invariant):
         self.queue = []
@@ -9,12 +10,12 @@ class Heap(object):
     def _append(self, key):
         """ append a new value in queue """
         """ Returns: The index at which the new value is appended """
-        if len(self.queue) > self.size: # There is still space left in queue
+        if len(self.queue) > self.size:#  There is still space left in queue
             self.queue[self.size] = key
         # No space left in queue
         self.queue.append(key)
         atIndex = self.size
-        self.size +=1
+        self.size += 1
         return atIndex
 
     def _left(self, parent):
